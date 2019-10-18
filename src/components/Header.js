@@ -13,18 +13,18 @@ export default function Header() {
 		<header className='ui centered'>
 			<h1 className='ui center'>Rick &amp; Morty Fan Page</h1>
 			<NavBar>
-				<NavLink class='nav-link' to='/'>
+				<NavLink className='nav-link' to='/'>
 					Home
 				</NavLink>
-				<NavLink class='nav-link' to='/characters'>
+				<NavLink className='nav-link' to='/characters'>
 					Characters
 				</NavLink>
-				<NavLink class='nav-link' to='/locations'>
+				<NavLink className='nav-link' to='/locations'>
 					Locations
 				</NavLink>
-				<NavLink class='nav-link' to='/episodes'>
+				{/* <NavLink className='nav-link' to='/episodes'>
 					Episodes
-				</NavLink>
+				</NavLink> */}
 			</NavBar>
 		</header>
 	);

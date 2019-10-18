@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-export default function CharacterCard({ image, name, species, status, location, origin }) {
+export default function CharacterCard({ image, name, status, location, origin }) {
 	return (
 		<Card
 			image={image}

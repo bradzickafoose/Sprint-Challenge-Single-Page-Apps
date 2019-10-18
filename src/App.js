@@ -4,7 +4,7 @@ import Header from './components/Header';
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
-import EpisodesList from './components/EpisodesList';
+// import EpisodesList from './components/EpisodesList';
 
 export default function App() {
 	return (
@@ -13,7 +13,7 @@ export default function App() {
 			<Route exact path='/' component={WelcomePage} />
 			<Route path='/characters' component={CharacterList} />
 			<Route path='/locations' component={LocationsList} />
-			<Route path='/episodes' component={EpisodesList} />
+			{/* <Route path='/episodes' component={EpisodesList} /> */}
 		</main>
 	);
 }

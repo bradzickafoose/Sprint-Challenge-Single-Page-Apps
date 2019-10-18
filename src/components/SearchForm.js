@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function SearchForm(props) {
 	return (
@@ -8,9 +8,10 @@ export default function SearchForm(props) {
 					className='search'
 					type='text'
 					onChange={props.handleInputChange}
-					value={props.query}
-					name='name'
-					placeholder='search by name'
+					value={props.searchQuery}
+					placeholder={props.placeHolder}
+					tabIndex='0'
+					autoComplete='off'
 				/>
 			</form>
 		</section>
