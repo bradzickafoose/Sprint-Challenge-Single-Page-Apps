@@ -22,9 +22,9 @@ export default function Header() {
 				<NavLink className='nav-link' to='/locations'>
 					Locations
 				</NavLink>
-				{/* <NavLink className='nav-link' to='/episodes'>
+				<NavLink className='nav-link' to='/episodes'>
 					Episodes
-				</NavLink> */}
+				</NavLink>
 			</NavBar>
 		</header>
 	);
