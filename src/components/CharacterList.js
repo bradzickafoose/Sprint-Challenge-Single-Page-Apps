@@ -21,8 +21,17 @@ export default function CharacterList() {
 
 	return (
 		<section className='character-list'>
-			{characters.map((character, index) => {
-				return <CharacterCard key={index} image={character.image} name={character.name} status={character.status} />;
+			{characters.map((character) => {
+				return (
+					<CharacterCard
+						image={character.image}
+						name={character.name}
+						species={character.species}
+						status={character.status}
+						location={character.location.name}
+						origin={character.origin.name}
+					/>
+				);
 			})}
 		</section>
 	);
