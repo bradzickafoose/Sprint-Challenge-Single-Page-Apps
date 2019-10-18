@@ -14,6 +14,10 @@ export default function CharacterList() {
 		});
 	}, []);
 
+	if (!character) {
+		return <h1>Loading...</h1>;
+	}
+
 	return (
 		<section className='character-list'>
 			<h2>TODO: `array.map()` over your state here!</h2>
