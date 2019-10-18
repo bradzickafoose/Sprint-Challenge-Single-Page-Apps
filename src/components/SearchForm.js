@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-export default function SearchForm() {
-	const [ query, setQuery ] = useState('');
-
-	const handleInputChange = (event) => {
-		setQuery(event.target.value);
-	};
+export default function SearchForm(props) {
 	return (
 		<section className='search-form'>
-			<form className='search'>
-				<input type='text' onChange={handleInputChange} value={query} name='name' placeholder='search by name' />
+			<form>
+				<input
+					className='search'
+					type='text'
+					onChange={props.handleInputChange}
+					value={props.query}
+					name='name'
+					placeholder='search by name'
+				/>
 			</form>
 		</section>
 	);

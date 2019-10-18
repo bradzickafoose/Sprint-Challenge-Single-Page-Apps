@@ -1,14 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import Header from './components/Header';
-import SearchForm from './components/SearchForm';
+import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 
 export default function App() {
 	return (
 		<main>
 			<Header />
-			<SearchForm />
-			<CharacterList />
+			<Route exact path='/' component={WelcomePage} />
+			<Route exact path='/character' component={CharacterList} />
 		</main>
 	);
 }
