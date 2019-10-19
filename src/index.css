@@ -3,6 +3,7 @@
 }
 
 body {
+	background-color: #4a4a91;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -15,7 +16,8 @@ main {
 	margin: 35px auto;
 	background: #fff;
 	padding: 15px;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(71, 71, 143, 0.3), 0 15px 12px rgba(71, 71, 143, 0.22);
 }
 
 .grid {
