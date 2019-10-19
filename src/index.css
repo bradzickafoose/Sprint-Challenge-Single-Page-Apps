@@ -31,6 +31,11 @@ main {
 .grid-view div.card.ui {
 	margin: 1.25rem;
 }
+
+.center {
+	text-align: center;
+}
+
 /*
 .main-img {
   display: block;
@@ -40,4 +45,10 @@ main {
 
 header h1 {
 	text-align: center;
+}
+
+.search {
+	padding: .5em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }

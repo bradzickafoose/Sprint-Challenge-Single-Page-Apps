@@ -3,6 +3,27 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Header() {
+	const HeadingText = styled.div`
+		h1 {
+			margin-bottom: 0;
+
+			span {
+				font-size: 3rem;
+			}
+			span:first-child {
+				color: red;
+			}
+			span:last-child {
+				color: blue;
+			}
+		}
+
+		p {
+			font-family: cursive;
+			font-size: 2rem;
+			text-align: center;
+		}
+	`;
 	const NavBar = styled.nav`
 		display: flex;
 		justify-content: space-between;
@@ -10,8 +31,13 @@ export default function Header() {
 		width: 90%;
 	`;
 	return (
-		<header className='ui centered'>
-			<h1 className='ui center'>Rick &amp; Morty Fan Page</h1>
+		<header>
+			<HeadingText>
+				<h1>
+					<span>Rick</span> &amp; <span>Morty</span>
+				</h1>
+				<p>Fan Page</p>
+			</HeadingText>
 			<NavBar>
 				<NavLink className='nav-link' to='/'>
 					Home
