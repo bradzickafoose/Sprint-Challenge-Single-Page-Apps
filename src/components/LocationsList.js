@@ -30,7 +30,7 @@ export default function LocationsList() {
 		<>
 			<SearchForm placeHolder='Search locations...' searchQuery={searchQuery} handleInputChange={handleInputChange} />
 
-			<section className='location-list'>
+			<section className='grid location-list'>
 				{locationData.map((location) => {
 					return (
 						<LocationCard

@@ -30,7 +30,7 @@ export default function EpisodesList() {
 		<>
 			<SearchForm placeHolder='Search episodes...' searchQuery={searchQuery} handleInputChange={handleInputChange} />
 
-			<section className='episode-list'>
+			<section className='grid episode-list'>
 				{episodeData.map((episode) => {
 					return (
 						<EpisodeCard

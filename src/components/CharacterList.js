@@ -30,7 +30,7 @@ export default function CharacterList() {
 		<>
 			<SearchForm placeHolder='Search characters...' searchQuery={searchQuery} handleInputChange={handleInputChange} />
 
-			<section className='character-list'>
+			<section className='grid character-list'>
 				{characterData.map((character) => {
 					return (
 						<CharacterCard

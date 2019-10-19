@@ -18,6 +18,11 @@ main {
 	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+.grid {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 .grid-view {
 	display: flex;
 	flex-wrap: wrap;
