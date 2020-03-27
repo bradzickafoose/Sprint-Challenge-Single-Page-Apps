@@ -1,16 +1,50 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import SearchForm from './SearchForm';
+import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+  const [ characterData, setCharacterData ] = useState([]);
+  const [ searchQuery, setSearchQuery ] = useState('');
+
+  const handleInputChange = (event) => {
+		  setSearchQuery(event.target.value);
+	};
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+    axios
+      .get('https://rickandmortyapi.com/api/character/')
+      .then((response) => {
+        const characters = response.data.results.filter(character =>
+          character.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        // console.log("rick and morty characters:", response);
+        setCharacterData(characters);
+      })
+      .catch((error) => {
+        console.log('Error: ', error);
+      });
+    }, [searchQuery]);
 
-  return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
-  );
+	return (
+		<>
+			<SearchForm placeHolder='Search characters...' searchQuery={searchQuery} handleInputChange={handleInputChange} />
+
+			<section className='grid character-list'>
+				{characterData.map((character) => {
+					return (
+						<CharacterCard
+							key={character.id}
+							image={character.image}
+							name={character.name}
+							species={character.species}
+							status={character.status}
+							location={character.location.name}
+							origin={character.origin.name}
+						/>
+					);
+				})}
+			</section>
+		</>
+	);
 }
