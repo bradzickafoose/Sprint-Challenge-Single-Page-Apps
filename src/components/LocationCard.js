@@ -5,8 +5,8 @@ const Card = styled.div`
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 10px;
-    margin: 16px 0 0;
-    padding: 20px;
+    margin: 0;
+    padding: 1.5rem;
     &:hover {
         transform: scale(1.05);
         transition: all 0.2s ease-in-out;

@@ -21,6 +21,10 @@ main {
     border-radius: 10px;
 }
 
+section {
+  margin: 2rem;
+}
+
 .grid {
     display: grid;
     grid-gap: 1em;
