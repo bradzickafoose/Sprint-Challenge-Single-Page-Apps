@@ -1,21 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function SearchForm(props) {
-	const Form = styled.form`margin-top: .5em;`;
+const StyledInput = styled.input`
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+`;
+
+export default function SearchForm({ handleInputChange, searchQuery, placeHolder }) {
 	return (
 		<section className='center'>
-			<Form>
-				<input
-					className='search'
+			<form>
+				<StyledInput
 					type='text'
-					onChange={props.handleInputChange}
-					value={props.searchQuery}
-					placeholder={props.placeHolder}
-					tabIndex='0'
-					autoComplete='off'
+					onChange={handleInputChange}
+					value={searchQuery}
+					placeholder={placeHolder}
 				/>
-			</Form>
+			</form>
 		</section>
 	);
 }
